@@ -5,29 +5,24 @@ Dividing a comma-separated string into pieces, converting these pieces into hexa
 
 How to use ?
 
-Download RemoteSender.zip and add it to the library.
+Download RemoteSenderESP8266.zip and add it to the library.
 
-#define RemoteSender_h
+#include <SoftwareSerial.h>
+#include "RemoteSenderESP8266.h"
 
-SoftwareSerial serial1(9, 8); // RX, TX   
-
-
-String data = "A1,F1,T5";
-
+SoftwareSerial mySoftwareSerial(12, 14); // RX, TX
+RemoteSenderESP8266 remoteSender(mySoftwareSerial);
 
 void setup() {
-
-
- serial1.begin(9600);  // The communication name for RemoteSender is serial1.
-
- 
-  // put your setup code here, to run once:
-
+  Serial.begin(9600);
+  mySoftwareSerial.begin(9600);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  String dataToSend = "0xFF,0xAA";
+  
+  remoteSender.send(dataToSend);
 
+  delay(1000);
 }
 
-void send(String data);
