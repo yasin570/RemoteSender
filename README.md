@@ -1,4 +1,4 @@
-# RemoteSender
+# RemoteSenderESP8266
 Dividing a comma-separated string into pieces, converting these pieces into hexadecimal numbers, and transmitting these hexadecimal numbers through the serial port.  String to uint8_t.   String ("A1,B1") to uint8_t.
 
 
