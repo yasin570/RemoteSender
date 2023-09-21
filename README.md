@@ -5,6 +5,8 @@ Dividing a comma-separated string into pieces, converting these pieces into hexa
 
 How to use ?
 
+Download RemoteSender.zip and add it to the library.
+
 #define RemoteSender_h
 
 SoftwareSerial serial1(9, 8); // RX, TX   
