@@ -10,7 +10,7 @@ How to use ?
 
 Download RemoteSenderESP8266.zip and add it to the library.
 
-
+```
 
 #include <SoftwareSerial.h>
 #include "RemoteSenderESP8266.h"
@@ -31,7 +31,7 @@ void loop() {
   delay(1000);
 }
 
-
+```
 
 The library author @Yasin570
 
